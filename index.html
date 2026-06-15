@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Limpee | Limpeza e higienizacao de vidros</title>
+    <meta
+      name="description"
+      content="Pro Limpee: excelencia em transparencia. Limpeza, conservacao e higienizacao de vidros para ambientes residenciais, comerciais e prediais. Solicite seu orcamento."
+    />
+    <meta name="theme-color" content="#05080d" />
+    <link rel="icon" href="/logo.jpg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pro Limpee | Excelencia em transparencia" />
+    <meta
+      property="og:description"
+      content="Limpeza, conservacao e higienizacao de vidros residenciais, comerciais e prediais."
+    />
+    <meta property="og:image" content="/logo.jpg" />
+  </head>
+  <body>
+    <!-- Fundo 3D -->
+    <canvas id="scene-canvas"></canvas>
+    <div class="scene-veil"></div>
+    <div class="grain"></div>
+
+    <!-- Navegacao -->
+    <header class="nav" id="nav">
+      <div class="wrap">
+        <a href="#topo" class="brand">
+          <img src="/logo.jpg" alt="Logo Pro Limpee" />
+          <span class="brand-text">
+            <b>PRO LIMPEE</b>
+            <span>Excelencia em transparencia</span>
+          </span>
+        </a>
+        <nav class="nav-links">
+          <a href="#servicos">Servicos</a>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#processo">Como funciona</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <a href="#contato" class="btn btn-primary nav-cta">Pedir orcamento</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="hero-badge">
+            <img src="/logo.jpg" alt="" />
+            Vidros impecaveis, do apartamento ao predio
+          </span>
+          <h1>
+            Seu vidro <span class="hl">perfeitamente limpo</span>, sua vista sem limites.
+          </h1>
+          <p class="sub">
+            Limpeza, conservacao e higienizacao profissional de vidros para
+            residencias, comercios e predios. Acabamento sem manchas, com
+            seguranca e pontualidade.
+          </p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">
+              Solicitar orcamento
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#" class="btn btn-wa js-wa">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.04c-.24.68-1.42 1.32-1.96 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.82-4.2-4.97-4.4-.15-.2-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.02.89 2.17.07.15.12.32.02.51-.1.2-.15.32-.29.49-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.34.07.12.07.71-.17 1.39z"/></svg>
+              Chamar no WhatsApp
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div class="item"><b>3</b><span>Segmentos atendidos</span></div>
+            <div class="item"><b>100%</b><span>Sem manchas, garantido</span></div>
+            <div class="item"><b>Altura</b><span>Equipe e equipamento proprios</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <h3>Por que a Pro Limpee</h3>
+          <p class="muted">Transparencia de verdade, no vidro e no atendimento.</p>
+          <ul class="checklist">
+            <li>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              Profissionais treinados e uniformizados
+            </li>
+            <li>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              Produtos que protegem o vidro e o meio ambiente
+            </li>
+            <li>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              Trabalho em altura com seguranca e NR aplicada
+            </li>
+            <li>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              Orcamento rapido e horario que cabe na sua rotina
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SEGMENTOS -->
+    <section class="segments">
+      <div class="wrap">
+        <div class="seg reveal">
+          <span class="num">01</span>
+          <div>
+            <h3>Residencial</h3>
+            <p>Janelas, sacadas, box, espelhos e fechamentos de vidro com brilho de loja.</p>
+          </div>
+        </div>
+        <div class="seg reveal">
+          <span class="num">02</span>
+          <div>
+            <h3>Comercial</h3>
+            <p>Vitrines, portas e divisorias sempre apresentaveis para receber clientes.</p>
+          </div>
+        </div>
+        <div class="seg reveal">
+          <span class="num">03</span>
+          <div>
+            <h3>Predial</h3>
+            <p>Fachadas envidracadas e areas comuns, com equipe preparada para altura.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICOS -->
+    <section class="section" id="servicos">
+      <div class="wrap">
+        <span class="eyebrow reveal">O que fazemos</span>
+        <h2 class="section-title reveal">
+          Vidros tratados com <span class="hl">cuidado de especialista</span>
+        </h2>
+
+        <div class="bento">
+          <article class="card has-photo c-wide reveal">
+            <img class="photo" src="https://picsum.photos/seed/prolimpee-janela-residencial/900/500" alt="Limpeza de janelas residenciais" loading="lazy" />
+            <div class="card-body">
+              <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V9h6v12"/></svg></div>
+              <h3>Vidros residenciais</h3>
+              <p>Janelas internas e externas, sacadas, espelhos e box deixados sem manchas e sem riscos.</p>
+            </div>
+          </article>
+
+          <article class="card has-photo c-tall reveal">
+            <img class="photo" src="https://picsum.photos/seed/prolimpee-vitrine-loja/600/900" alt="Limpeza de vitrines comerciais" loading="lazy" />
+            <div class="card-body">
+              <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg></div>
+              <h3>Fachadas e vitrines comerciais</h3>
+              <p>Sua loja sempre convidativa. Vitrines, portas e divisorias de vidro impecaveis para receber bem.</p>
+            </div>
+          </article>
+
+          <article class="card c-std reveal">
+            <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></div>
+            <h3>Limpeza predial em altura</h3>
+            <p>Fachadas envidracadas e janelas de andares altos, com tecnicas e equipamentos de seguranca.</p>
+          </article>
+
+          <article class="card c-std reveal">
+            <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
+            <h3>Higienizacao e conservacao</h3>
+            <p>Mais que limpar: tratamos e conservamos a superficie para prolongar a vida do vidro.</p>
+          </article>
+
+          <article class="card c-half reveal">
+            <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg></div>
+            <h3>Limpeza pos-obra</h3>
+            <p>Removemos respingos de tinta, cimento e adesivos sem danificar o vidro nem as esquadrias.</p>
+          </article>
+
+          <article class="card c-half reveal">
+            <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/></svg></div>
+            <h3>Box, espelhos e sacadas</h3>
+            <p>Acabamento que tira a aparencia opaca e devolve o brilho original de boxes e espelhos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section" id="diferenciais">
+      <div class="wrap">
+        <span class="eyebrow reveal">Por que escolher a Pro Limpee</span>
+        <h2 class="section-title reveal">
+          O detalhe que <span class="hl">voce ve da rua</span>
+        </h2>
+
+        <div style="margin-top: 60px">
+          <div class="feature">
+            <div class="feature-media reveal">
+              <img src="https://picsum.photos/seed/prolimpee-equipe-trabalho/800/600" alt="Equipe Pro Limpee em servico" loading="lazy" />
+              <span class="tag">Equipe propria e treinada</span>
+            </div>
+            <div class="feature-copy reveal">
+              <h3>Acabamento sem manchas, do jeito certo</h3>
+              <p>
+                Vidro limpo nao e so passar pano. Usamos rodo profissional,
+                tecnica adequada e produtos certos para cada tipo de superficie,
+                eliminando o efeito esbranquicado e as marcas de secagem.
+              </p>
+              <ul class="mini">
+                <li>
+                  <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                  <div><b>Tecnica profissional</b><span>Rodo, escovas e panos de microfibra, sem riscos.</span></div>
+                </li>
+                <li>
+                  <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                  <div><b>Produtos adequados</b><span>Formulas que limpam fundo e respeitam o vidro.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feature reverse">
+            <div class="feature-media reveal">
+              <img src="https://picsum.photos/seed/prolimpee-fachada-predio/800/600" alt="Limpeza de fachada predial em altura" loading="lazy" />
+              <span class="tag">Trabalho em altura com seguranca</span>
+            </div>
+            <div class="feature-copy reveal">
+              <h3>Seguranca e responsabilidade em cada andar</h3>
+              <p>
+                Para fachadas e predios, seguranca nao e opcional. Trabalhamos
+                com procedimentos e equipamentos adequados para altura, dando
+                tranquilidade para condominios e empresas.
+              </p>
+              <ul class="mini">
+                <li>
+                  <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <div><b>Procedimentos de seguranca</b><span>Equipe orientada para trabalho em altura.</span></div>
+                </li>
+                <li>
+                  <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></span>
+                  <div><b>Pontualidade</b><span>Agendamento respeitado, do inicio ao fim.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO (horizontal pinned) -->
+    <section class="process-pin" id="processo">
+      <div class="process-track">
+        <div class="process-head">
+          <span class="eyebrow">Como funciona</span>
+          <h2 class="section-title">Do contato ao vidro brilhando em 4 passos</h2>
+          <p class="lead">Um processo simples e transparente, sem surpresas no final.</p>
+        </div>
+        <article class="step">
+          <span class="step-n">01</span>
+          <h3>Voce nos chama</h3>
+          <p>Pelo formulario ou WhatsApp, conte o tipo de ambiente e o que precisa ser limpo.</p>
+        </article>
+        <article class="step">
+          <span class="step-n">02</span>
+          <h3>Avaliacao e orcamento</h3>
+          <p>Analisamos o servico e enviamos um orcamento claro, com escopo e prazo definidos.</p>
+        </article>
+        <article class="step">
+          <span class="step-n">03</span>
+          <h3>Agendamento</h3>
+          <p>Combinamos a melhor data e horario, respeitando a rotina da sua casa ou empresa.</p>
+        </article>
+        <article class="step">
+          <span class="step-n">04</span>
+          <h3>Execucao e entrega</h3>
+          <p>Realizamos o servico e conferimos o resultado com voce. Vidro impecavel, sem manchas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="section" id="galeria">
+      <div class="wrap">
+        <span class="eyebrow reveal">Resultados reais</span>
+        <h2 class="section-title reveal">
+          O brilho que aparece <span class="hl">nas fotos e ao vivo</span>
+        </h2>
+        <p class="lead reveal">Acompanhe nossos trabalhos no Instagram <a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener" style="color:var(--accent-bright)">@prolimpee</a>.</p>
+
+        <div class="gallery reveal">
+          <a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener" class="big">
+            <img src="https://picsum.photos/seed/prolimpee-galeria-1/800/800" alt="Trabalho de limpeza de vidros" loading="lazy" />
+            <span class="ov"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+          </a>
+          <a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener">
+            <img src="https://picsum.photos/seed/prolimpee-galeria-2/500/500" alt="Limpeza de vidros" loading="lazy" />
+            <span class="ov"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+          </a>
+          <a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener">
+            <img src="https://picsum.photos/seed/prolimpee-galeria-3/500/500" alt="Limpeza de vidros" loading="lazy" />
+            <span class="ov"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+          </a>
+          <a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener">
+            <img src="https://picsum.photos/seed/prolimpee-galeria-4/500/500" alt="Limpeza de vidros" loading="lazy" />
+            <span class="ov"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+          </a>
+          <a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener">
+            <img src="https://picsum.photos/seed/prolimpee-galeria-5/500/500" alt="Limpeza de vidros" loading="lazy" />
+            <span class="ov"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section" id="depoimentos">
+      <div class="wrap">
+        <span class="eyebrow reveal">Quem ja contratou</span>
+        <h2 class="section-title reveal">Confianca que se ve no resultado</h2>
+
+        <div class="quotes">
+          <figure class="quote reveal">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Os vidros da sacada estavam horriveis com a poeira da obra. Ficaram como novos, sem nenhuma marca. Servico impecavel."</p>
+            <figcaption class="who">
+              <span class="av">RM</span>
+              <span><b>Renata Marques</b><span>Apartamento, Zona Sul</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Cuidam da vitrine da minha loja toda semana. Pontualidade e acabamento nota dez, faz diferenca na entrada dos clientes."</p>
+            <figcaption class="who">
+              <span class="av">AC</span>
+              <span><b>Anderson Coelho</b><span>Loja de roupas</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Contratamos para a fachada do predio. Equipe organizada, segura e educada. O condominio toda elogiou o resultado."</p>
+            <figcaption class="who">
+              <span class="av">JS</span>
+              <span><b>Juliana Salgado</b><span>Sindica de condominio</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section contact" id="contato">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <span class="eyebrow">Fale com a gente</span>
+            <h2 class="section-title">Peca seu orcamento sem compromisso</h2>
+            <p class="lead">
+              Responda rapidinho ou fale direto no WhatsApp. Retornamos com o
+              orcamento o quanto antes.
+            </p>
+
+            <div style="margin-top: 30px">
+              <a href="#" class="chan js-wa">
+                <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.04c-.24.68-1.42 1.32-1.96 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.82-4.2-4.97-4.4-.15-.2-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.02.89 2.17.07.15.12.32.02.51-.1.2-.15.32-.29.49-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.34.07.12.07.71-.17 1.39z"/></svg></span>
+                <span><b>WhatsApp</b><span class="js-wa-text">Toque para conversar agora</span></span>
+              </a>
+              <a href="#" class="chan js-phone">
+                <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                <span><b class="js-phone-text">Ligar agora</b><span>Atendimento por telefone</span></span>
+              </a>
+              <a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener" class="chan">
+                <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+                <span><b>@prolimpee</b><span>Veja trabalhos no Instagram</span></span>
+              </a>
+            </div>
+          </div>
+
+          <form class="form-card reveal" id="orcamento-form" novalidate>
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" required />
+              </div>
+              <div class="field">
+                <label for="servico">Tipo de servico</label>
+                <select id="servico" name="servico">
+                  <option>Vidros residenciais</option>
+                  <option>Fachada / vitrine comercial</option>
+                  <option>Limpeza predial em altura</option>
+                  <option>Limpeza pos-obra</option>
+                  <option>Box, espelhos e sacadas</option>
+                  <option>Outro / nao sei</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="mensagem">Conte um pouco sobre o servico</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Ex: limpeza das janelas externas de um apartamento de 2 quartos"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Quero meu orcamento
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">Seus dados sao usados apenas para retornar o contato.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Pronto para enxergar a diferenca?</h2>
+          <p>Vidros limpos transformam qualquer ambiente. Fale com a Pro Limpee e receba seu orcamento.</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">Solicitar orcamento</a>
+            <a href="#" class="btn btn-ghost js-wa">Chamar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RODAPE -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a href="#topo" class="brand">
+              <img src="/logo.jpg" alt="Logo Pro Limpee" />
+              <span class="brand-text">
+                <b>PRO LIMPEE</b>
+                <span>Excelencia em transparencia</span>
+              </span>
+            </a>
+            <p class="about">
+              Limpeza, conservacao e higienizacao de vidros para ambientes
+              residenciais, comerciais e prediais.
+            </p>
+          </div>
+          <div>
+            <h4>Servicos</h4>
+            <ul>
+              <li><a href="#servicos">Vidros residenciais</a></li>
+              <li><a href="#servicos">Fachadas comerciais</a></li>
+              <li><a href="#servicos">Limpeza predial</a></li>
+              <li><a href="#servicos">Limpeza pos-obra</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="#" class="js-wa">WhatsApp</a></li>
+              <li><a href="#" class="js-phone js-phone-text">Telefone</a></li>
+              <li><a href="https://www.instagram.com/prolimpee/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="#contato">Pedir orcamento</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; <span id="year"></span> Pro Limpee. Todos os direitos reservados.</span>
+          <span>Excelencia em transparencia.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp flutuante -->
+    <a href="#" class="fab js-wa" aria-label="Falar no WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.04c-.24.68-1.42 1.32-1.96 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.82-4.2-4.97-4.4-.15-.2-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.02.89 2.17.07.15.12.32.02.51-.1.2-.15.32-.29.49-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.34.07.12.07.71-.17 1.39z"/></svg>
+    </a>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

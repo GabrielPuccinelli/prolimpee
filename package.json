@@ -1,0 +1,22 @@
+{
+  "name": "pro-limpee",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Landing page da Pro Limpee - Excelencia em transparencia. Limpeza, conservacao e higienizacao de vidros.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "@supabase/supabase-js": "^2.45.4",
+    "gsap": "^3.12.5",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
