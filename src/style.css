@@ -40,6 +40,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1053,6 +1054,21 @@ img {
     padding: 14px clamp(20px, 5vw, 56px);
     width: 100%;
   }
+  /* Processo: pilha vertical no mobile (sem pin horizontal) */
+  .process-pin.process-stacked { padding-block: clamp(70px, 12vw, 110px); }
+  .process-stacked .process-track {
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
+    padding-inline: clamp(20px, 5vw, 56px);
+    transform: none !important;
+  }
+  .process-stacked .process-head,
+  .process-stacked .step {
+    width: 100%;
+  }
+  .process-stacked .step .step-n { margin-bottom: 14px; font-size: 2.8rem; }
+
   .bento { grid-template-columns: repeat(2, 1fr); }
   .card.c-wide,
   .card.c-tall,
@@ -1071,7 +1087,31 @@ img {
   .segments .wrap { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .hero-meta { gap: 22px; }
+  .hero-meta { gap: 22px 28px; }
+
+  /* navbar enxuta: logo + menu hamburguer */
+  .nav-cta { display: none; }
+  .brand .brand-text span { display: none; }
+  .brand b { font-size: 1.05rem; }
+  .brand img { width: 36px; height: 36px; }
+
+  /* CTAs em largura cheia (toque) */
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+  .cta-band .hero-actions .btn { width: 100%; }
+
+  /* hero respira melhor */
+  .hero { padding-top: 84px; }
+  .hero h1 { font-size: clamp(2.1rem, 9vw, 2.9rem); }
+  .section-title { font-size: clamp(1.7rem, 7.5vw, 2.2rem); }
+
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery a.big { aspect-ratio: 1; }
+}
+
+@media (max-width: 380px) {
+  .hero-meta .item b { font-size: 1.4rem; }
+  .wrap { padding-inline: 18px; }
 }
 
 /* ---- Reduced motion ---- */

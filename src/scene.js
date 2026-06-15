@@ -20,13 +20,19 @@ export function initScene(canvas) {
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
+  // Em telas pequenas / toque, roda mais leve (bateria e fluidez)
+  const isMobile = window.matchMedia(
+    "(max-width: 860px), (pointer: coarse)"
+  ).matches;
+  const maxDPR = isMobile ? 1.5 : 2;
+
   const renderer = new THREE.WebGLRenderer({
     canvas,
-    antialias: true,
+    antialias: !isMobile,
     alpha: true,
     powerPreference: "high-performance",
   });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, maxDPR));
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.05;
@@ -152,8 +158,8 @@ export function initScene(canvas) {
     envMapIntensity: 1.2,
     transparent: true,
   });
-  const dropGeo = new THREE.IcosahedronGeometry(0.12, 2);
-  const DROPS = 60;
+  const dropGeo = new THREE.IcosahedronGeometry(0.12, isMobile ? 1 : 2);
+  const DROPS = isMobile ? 26 : 60;
   const drops = new THREE.InstancedMesh(dropGeo, dropMat, DROPS);
   const dummy = new THREE.Object3D();
   const dropData = [];
@@ -177,9 +183,12 @@ export function initScene(canvas) {
   // ---- Post-processing: bloom ciano ----
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene, camera));
+  const bloomRes = isMobile
+    ? new THREE.Vector2(window.innerWidth * 0.5, window.innerHeight * 0.5)
+    : new THREE.Vector2(window.innerWidth, window.innerHeight);
   const bloom = new UnrealBloomPass(
-    new THREE.Vector2(window.innerWidth, window.innerHeight),
-    0.65, // strength
+    bloomRes,
+    isMobile ? 0.5 : 0.65, // strength
     0.7, // radius
     0.85 // threshold
   );
@@ -208,7 +217,7 @@ export function initScene(canvas) {
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
     composer.setSize(w, h);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, maxDPR));
   }
   window.addEventListener("resize", onResize);
 

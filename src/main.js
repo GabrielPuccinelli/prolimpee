@@ -88,9 +88,8 @@ function wireHorizontalProcess() {
   if (!wrap || !track) return;
 
   if (reduceMotion || window.innerWidth < 860) {
-    // fallback: rolagem horizontal manual
-    wrap.style.overflowX = "auto";
-    track.style.paddingBlock = "60px";
+    // mobile/reduced-motion: vira pilha vertical (controlado no CSS)
+    wrap.classList.add("process-stacked");
     return;
   }
 
